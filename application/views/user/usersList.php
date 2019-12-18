@@ -1,5 +1,6 @@
 <?php $slNo = 0;
-if (!empty($usersList)) { ?>
+if (!empty($usersList)) {
+    ?>
     <div class="table-responsive">
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead>
@@ -11,19 +12,19 @@ if (!empty($usersList)) { ?>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($usersList as $key => $user) { ?>
+    <?php foreach ($usersList as $key => $user) { ?>
                     <tr>
                         <td><?= $slNo += 1; ?></td>
                         <td><?= $user['name']; ?></td>
                         <td><?= $user['username']; ?></td>
                         <td><?= $user['created_ts']; ?></td>
                     </tr>
-                <?php } ?>
+    <?php } ?>
             </tbody>
         </table>
     </div>
 <?php } else { ?>
     <div class="well well-sm">
-        <h4>No data Found</h4>
+        <p class="no-data">No data Found</p>
     </div>
 <?php } ?>
